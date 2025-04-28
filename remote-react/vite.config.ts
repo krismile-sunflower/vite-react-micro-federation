@@ -18,5 +18,13 @@ export default defineConfig({
   ],
   build: {
     target: 'esnext',
+  },
+  css: {
+    modules: {
+      // 生成的类名格式
+      generateScopedName: '[name]__[local]___[hash:base64:5]',
+      // 是否将 camelCase 转换为 kebab-case
+      localsConvention: 'camelCase'
+    }
   }
 });

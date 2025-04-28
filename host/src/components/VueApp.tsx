@@ -48,7 +48,7 @@ const VueComponent: React.FC = () => {
         vueAppRef.current.unmount();
       }
     };
-  }, []); // 当props改变时重新加载
+  }, []);
 
   return <div ref={containerRef} className="vue-component-container"></div>;
 };

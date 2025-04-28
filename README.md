@@ -22,7 +22,6 @@
 ## 功能特点
 
 - 基于 Module Federation 的微前端架构
-- React里面集成Vue项目还是有点问题（目前只能通过iframe或者WebComponent进行适配）
 - 共享依赖，避免重复加载
 - 独立开发和部署能力
 
@@ -177,3 +176,10 @@ function App() {
 - 当使用 TypeScript 时，远程组件的类型信息不会自动传递给主应用
 - 需要在主应用中手动定义与远程组件匹配的类型
 - 使用类型断言 `as unknown as React.ComponentType<Props>` 来解决类型错误
+
+### 样式问题
+- 样式时，由于样式冲突，样式可能无法正确加载。
+- 解决方案：
+ - 使用 CSS 模块化，避免样式冲突
+ - css in js
+ - css 原子化
