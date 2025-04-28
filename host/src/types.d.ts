@@ -3,6 +3,11 @@ declare module 'remote_react/ReactApp' {
   export default ReactApp;
 }
 
+declare module 'remote_vue/VueApp' {
+  const VueApp: React.ComponentType;
+  export default VueApp;
+}
+
 declare module 'remote_vue/VueAppElement' {
   const VueAppElement: object;
   export default VueAppElement;

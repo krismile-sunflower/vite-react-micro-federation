@@ -12,7 +12,7 @@ export default defineConfig({
         remote_vue: "http://localhost:3001/dist/assets/remoteEntry.js",
         remote_react: "http://localhost:3002/dist/assets/remoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "vue"],
     }),
   ],
   build: {

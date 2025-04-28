@@ -2,11 +2,7 @@ import { lazy, Suspense, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-// import './App.css'
-// import VueApp from 'remote_vue/VueApp'
-// import ReactApp from 'remote_react/ReactApp'
-import VueApp from './Vue-App'
-// import HelloWorld from 'remote_react/HelloWorld'
+import VueComponent from './components/VueApp'
 
 type Props = {
   title: string;
@@ -15,18 +11,11 @@ type Props = {
 
 function App() {
   const [count, setCount] = useState(0)
-  // const VueApp = lazy(
-  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //   // @ts-expect-error
-  //   () => import('remote_vue/VueApp'),
-  // );
 
   
   const ReactApp = lazy(() => import('remote_react/ReactApp'));
   const HelloWorld = lazy(() => import('remote_react/HelloWorld')) as unknown as React.ComponentType<Props>;
 
-  // console.log("VueApp", VueAppWrapper)
-  console.log("ReactApp", ReactApp)
   return (
     <>
       <div>
@@ -52,7 +41,8 @@ function App() {
 
       <div>
         <h2>Vue App</h2>
-        <VueApp />
+        <VueComponent />
+        {/* <VueApp /> */}
 
         <h2>React App</h2>
         <Suspense fallback={<div>Loading...</div>}>
