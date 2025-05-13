@@ -13,7 +13,7 @@ export default defineConfig({
         "./ReactApp": "./src/App.tsx",
         "./HelloWorld": "./src/components/HelloWorld.tsx",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "antd"],
     }),
   ],
   build: {

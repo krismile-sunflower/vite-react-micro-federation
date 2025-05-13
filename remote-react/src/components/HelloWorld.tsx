@@ -1,5 +1,6 @@
 import { useState } from "react";
 import css from "./HelloWorld.module.css";
+import { Button } from "antd";
 
 type Props = {
     title: string;
@@ -15,6 +16,8 @@ export default function HelloWorld({ title, onClick }: Props) {
             <br />
             <button onClick={() => onClick(count)} className={css.text}>点击我</button>
             <p>Count: {count}</p>
+
+            <Button type="primary">Antd Button</Button>
         </div>
     )
 }
